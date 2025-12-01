@@ -24,7 +24,7 @@ public class EstimateAttachment {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "estimate_id", nullable = false)
-    @JsonIgnoreProperties({"items", "histories", "attachments", "responses", "estimatedBy"})
+    @JsonIgnoreProperties({"items", "histories", "attachments", "responses", "estimatedBy", "hibernateLazyInitializer", "handler"})
     private Estimate estimate;
     
     @Column(name = "file_name", nullable = false, length = 255)
